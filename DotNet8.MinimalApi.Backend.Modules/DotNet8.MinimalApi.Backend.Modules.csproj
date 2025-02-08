@@ -10,6 +10,7 @@
     <ItemGroup>
       <ProjectReference Include="..\DotNet8.MinimalApi.Databse\DotNet8.MinimalApi.Databse.csproj" />
       <ProjectReference Include="..\DotNet8.MinimalApi.Models\DotNet8.MinimalApi.Models.csproj" />
+      <ProjectReference Include="..\DotNet8.MinimalApi.Shared\DotNet8.MinimalApi.Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>

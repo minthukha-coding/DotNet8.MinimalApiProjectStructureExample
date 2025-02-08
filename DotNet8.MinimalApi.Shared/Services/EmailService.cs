@@ -1,6 +1,4 @@
-﻿using FluentEmail.Core;
-
-namespace ClassLibrary1DotNet8.MinimalApi.Shared.Services;
+﻿namespace ClassLibrary1DotNet8.MinimalApi.Shared.Services;
 
 public class EmailService
 {

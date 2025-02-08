@@ -13,6 +13,8 @@
 		<PackageReference Include="FluentEmail.Smtp" Version="3.0.2" />
 		<PackageReference Include="AWSSDK.SimpleEmail" Version="3.7.400.3" />
 		<PackageReference Include="FluentEmail.Razor" Version="3.0.2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.7" />
 	</ItemGroup>
 
 	<ItemGroup>

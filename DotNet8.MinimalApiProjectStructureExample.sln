@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.MinimalApi.Databse"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.MinimalApi.Shared", "DotNet8.MinimalApi.Shared\DotNet8.MinimalApi.Shared.csproj", "{3030973B-F35E-45EA-9F01-A3280B6C5957}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doctouments", "Doctouments", "{A3B37666-B8CA-4158-AC1C-BC0207A4BA23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

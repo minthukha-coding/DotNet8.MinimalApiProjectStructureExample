@@ -1,15 +1,19 @@
-﻿using DotNet8.EmailServiceMinimalApi.Models.User;
+﻿using ClassLibrary1DotNet8.MinimalApi.Shared.Services;
+using DotNet8.EmailServiceMinimalApi.Models.User;
 
 namespace DotNet8.MinimalApiProjectStructureExample.Backend.Modules.Features.Auth;
 
 public class AuthRepository
 {
-    private readonly AppDbContext _db;
-
-    public AuthRepository(AppDbContext db)
+    public AuthRepository(AppDbContext db,
+        JwtTokenService jwtTokenService)
     {
         _db = db;
+        _jwtTokenService = jwtTokenService;
     }
+
+    private readonly AppDbContext _db;
+    private readonly JwtTokenService _jwtTokenService;
 
     public async Task<Result<bool>> Register(UserModel reqModel)
     {
@@ -47,6 +51,7 @@ public class AuthRepository
 
         item.FailPasswordCount = 0;
         await _db.SaveChangesAsync();
-        return checkPass == true ? Result<string>.SuccessResult() : Result<string>.FailureResult();
+        var token = _jwtTokenService.GenerateJwtToken(item.UserName, item.Email);
+        return checkPass == true ? Result<string>.SuccessResult(token) : Result<string>.FailureResult();
     }
 }
